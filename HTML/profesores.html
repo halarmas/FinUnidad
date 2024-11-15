@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styleProfesores.css">
+    <title>Profesores</title>
+    
+</head>
+<body>
+
+    <header>
+            
+        <div class="header-container"><img src="imagenes/escudo2.png" id="escudo" /></div>
+            <div class="texto"><h3>PROFESORES</h3></div>
+            
+            <div><img src="imagenes/escudo2.png" id="escudo"/></div>
+        
+    </header>
+
+<form id="searchForm">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+
+    <label for="apellido1">Apellido 1:</label>
+    <input type="text" id="apellido1" name="apellido1">
+
+    <label for="sexo">Sexo:</label>
+    <select id="sexo" name="sexo">
+        <option value="">Seleccione</option>
+        <option value="H">Masculino</option>
+        <option value="M">Femenino</option>
+    </select>
+
+    <label for="departamento">Departamento:</label>
+    <select id="departamento" name="departamento">
+        <option value="Informática">Informática</option>
+        <option value="Matemáticas">Matemáticas</option>
+        <option value="Economía y Empresa">Economía y Empresa</option>
+        <option value="Educación">Educación</option>
+        <option value="Agronomía">Agronomía</option>
+        <option value="Química y Física">Química y Física</option>
+        <option value="Filología">Filología</option>
+        <option value="Derecho">Derecho</option>
+        <option value="Biología y Geología">Biología y Geología</option>
+        
+    </select>
+
+    <button type="button" onclick="getProfesores()">Buscar</button>
+    
+</form>
+
+<table id="profesoresTable">
+    <thead>
+        <tr>
+            <th>NIF</th>
+            <th>Nombre</th>
+            <th>Apellido 1</th>
+            <th>Apellido 2</th>
+            <th>Ciudad</th>
+            <th>Sexo</th>
+            <th>Nombre Departamento</th>
+        </tr>
+    </thead>
+   
+    <tbody id="resultados"></tbody>
+        
+</table>
+
+<div id="noResults" class="no-results">
+    No hay resultados para su búsqueda.
+</div>
+
+<a href="indexUniversidad.html">Volver a la página inicio</a>
+
+</body>
+</html>

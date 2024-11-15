@@ -1,5 +1,7 @@
 var express = require("express"),
   bodyParser = require("body-parser");
+  
+
 
 const app = express();
 app.use(
@@ -7,9 +9,9 @@ app.use(
     extended: true,
   })
 );
+
 app.use(bodyParser.json());
 
-app.use("/alumnos", require("./routes/alumnos"));
 app.use("/profesores", require("./routes/profesores"));
 
 const PORT = process.env.PORT || 3000;

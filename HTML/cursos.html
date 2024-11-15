@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styleCursos.css">
+    <title>Cursos</title>
+ 
+</head>
+<body>
+
+    <header>
+            
+        <div class="header-container"><img src="imagenes/escudo2.png" id="escudo" /></div>
+            <div class="texto"><h3>CURSOS</h3></div>
+            
+            <div><img src="imagenes/escudo2.png" id="escudo"/></div>
+        
+    </header>
+
+<form id="gradoForm">
+    <label for="grado">Seleccione un Grado:</label>
+    <select id="grado" name="grado" onchange="cargarAsignaturas()">
+        <option value="">Seleccione un grado</option>
+        <!-- Aquí se cargarían los grados desde la base de datos -->
+    </select>
+</form>
+
+<table id="asignaturasTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Créditos</th>
+            <th>Cursos</th>
+            <th>Cuatrimestre</th>
+            <th>Nombre Profesor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Aquí se cargarían las asignaturas del grado seleccionado -->
+    </tbody>
+</table>
+
+<a href="indexUniversidad.html">Volver a la página inicio</a>
+
+</body>
+</html>

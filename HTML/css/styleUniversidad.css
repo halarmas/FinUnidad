@@ -6,13 +6,27 @@ body {
 }
 
 header {
-    background-color: #495057; 
-    color: #ffffff; 
+    
+    color: #030303; 
     text-align: center;
     padding: 40px 0; 
-    font-size: 2.8em; 
+    font-size: 3.4em; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
     border-bottom: 5px solid #007BFF; 
+    background-image: url(../imagenes/fondo.jpg);
+    justify-content: space-evenly;
+    display:flex ;
+    align-items: center;
+}
+
+.header-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+#escudo {
+    height: 20rem;
+    width: 20rem;
 }
 
 #Enlaces {
@@ -60,4 +74,7 @@ header {
 .enlace-item:hover a {
     background-color: rgba(0, 123, 255, 1);
     color: #ffffff;
+}
+h3{
+    font-family: 'Luminari';
 }
