@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styleProfesores.css">
+    <script src="./js/scriptProfesores.js"></script>
     <title>Profesores</title>
     
 </head>
@@ -34,19 +35,12 @@
 
     <label for="departamento">Departamento:</label>
     <select id="departamento" name="departamento">
-        <option value="Informática">Informática</option>
-        <option value="Matemáticas">Matemáticas</option>
-        <option value="Economía y Empresa">Economía y Empresa</option>
-        <option value="Educación">Educación</option>
-        <option value="Agronomía">Agronomía</option>
-        <option value="Química y Física">Química y Física</option>
-        <option value="Filología">Filología</option>
-        <option value="Derecho">Derecho</option>
-        <option value="Biología y Geología">Biología y Geología</option>
+    
+     
         
     </select>
 
-    <button type="button" onclick="getProfesores()">Buscar</button>
+    <button type="button" onclick="filtrarProfesores()">Buscar</button>
     
 </form>
 
@@ -67,7 +61,7 @@
         
 </table>
 
-<div id="noResults" class="no-results">
+<div id="noResultados" class="no-results">
     No hay resultados para su búsqueda.
 </div>
 

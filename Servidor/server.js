@@ -1,5 +1,6 @@
 var express = require("express"),
   bodyParser = require("body-parser");
+  const cors =require("cors");
   
 
 
@@ -9,7 +10,7 @@ app.use(
     extended: true,
   })
 );
-
+app.use(cors());
 app.use(bodyParser.json());
 
 app.use("/profesores", require("./routes/profesores"));
