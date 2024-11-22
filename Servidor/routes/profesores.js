@@ -22,8 +22,10 @@ router.get("/", async function (req, res,) {
 
 router.get("/filter", async function (req, res,) {
 	
+	const { nombre, apellido1, sexo, departamento } = req.query;
+
 	try {
-        const resultado = await profesoresService.filtrarProfesores();
+        const resultado = await profesoresService.filtrarProfesores(nombre, apellido1, sexo, departamento );
         const msg = "Se han filtrado correctamente todos los profesores";
 		let data = resultado.data;
         res.status(200).json({msg,data});

@@ -14,6 +14,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use("/profesores", require("./routes/profesores"));
+app.use("/alumnos", require("./routes/alumnos"));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT);

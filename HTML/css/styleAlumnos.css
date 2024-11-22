@@ -20,7 +20,7 @@ header {
     align-items: center;
 }
 
-form {
+div {
     margin: 20px;
     display: flex;
     flex-direction: column;

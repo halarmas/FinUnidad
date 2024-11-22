@@ -28,6 +28,8 @@ async function getAllProfesores(){
       JOIN departamento ON profesor.id_departamento = departamento.id
       WHERE 1=1`;
       
+      
+
       const params = [];  
     
       

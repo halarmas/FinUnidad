@@ -30,7 +30,7 @@ function buscarProfesores(){
 function filtrarProfesores(){
     alert("Empiza el filtrado");
 
-    const url = "http://localhost:3000/profesores/filter";
+    let url = "http://localhost:3000/profesores/filter";
     const form = document.getElementById("searchForm");
     console.log("FormData es esto" +FormData.searchForm);
     var datos = new FormData(form);
@@ -41,9 +41,9 @@ function filtrarProfesores(){
     console.log(datos.get('departamento'));
 
     url += "?nombre="+datos.get('nombre')+"&";
-    url += "?apellido1=" + datos.get('apellido1') + "&";
-    url += "?sexo=" + datos.get('sexo') + "&";
-    url += "?departamento=" + datos.get('departamento');
+    url += "apellido1=" + datos.get('apellido1') + "&";
+    url += "sexo=" + datos.get('sexo') + "&";
+    url += "departamento=" + datos.get('departamento');
 
     console.log(url);
     console.debug(url);

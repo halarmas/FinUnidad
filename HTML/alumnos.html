@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styleAlumnos.css">
+    <script src="./js/scriptAlumnos.js"></script>
     <title>Alumnos</title>
  
 </head>
@@ -18,7 +19,7 @@
         
     </header>
 
-<form id="searchForm">
+<div id="form">
     <label for="idNif">Buscar por ID o NIF:</label>
     <input type="text" id="idNif" name="idNif">
 
@@ -26,7 +27,7 @@
     <input type="text" id="nombre" name="nombre">
 
     <button type="button" onclick="buscarAlumnos()">Buscar</button>
-</form>
+</div>
 
 <table id="alumnosTable">
     <thead>
@@ -38,11 +39,11 @@
             <th>Apellido 2</th>
             <th>Ciudad</th>
             <th>Sexo</th>
+            <th>Acción</th>
         </tr>
     </thead>
-    <tbody>
-        <!-- Aquí se cargarían los alumnos desde la base de datos -->
-    </tbody>
+    <tbody id="resultados"></tbody>
+    
 </table>
 
 <div id="noResults" class="no-results">
@@ -60,7 +61,7 @@
         </tr>
     </thead>
     <tbody>
-        <!-- Aquí se cargarían las asignaturas del alumno seleccionado -->
+        
     </tbody>
 </table>
 
