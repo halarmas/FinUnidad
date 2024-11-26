@@ -28,7 +28,7 @@ async function getAlumnosIdNif(idNif){
 
   async function getAlumnoNombre(nombre) {
 
-    let query =  'SELECT alumno.id, alumno.nif, alumno.nombre, alumno.apellido1, alumno.apellido2, alumno.ciudad,alumno.sexo from alumno WHERE nombre="' + nombre + '";';
+    let query =  'SELECT alumno.id, alumno.nif, alumno.nombre, alumno.apellido1, alumno.apellido2, alumno.ciudad,alumno.sexo from alumno WHERE nombre LIKE "%'+ nombre +'%";';
     
     console.log("query" +query);
     const rows = await db.query(query);

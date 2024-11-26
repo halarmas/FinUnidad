@@ -53,8 +53,8 @@ function buscarAlumnos(){
         table.innerHTML = out;}
 
 }else if(idNif == '') { 
-    let url = "http://localhost:3000/alumnos";
-    url += '';
+    let url = "http://localhost:3000/alumnos/";
+    url += nombre;
 alert("HOLA");
     fetch (url,{method:'GET'}).then(
         response => { 
@@ -63,8 +63,10 @@ alert("HOLA");
         }
     ).then(
         data => {
+            console.log("PRIMER THEN");
             console.log(data);
-            const arrayAlumnos = data.data;
+            const arrayAlumnos = data.data.data;
+            console.log("ARRAYALUMNOS" + data.data.data);
             rellenarTabla(arrayAlumnos);
             console.debug('Hemos recuperado el json')
 
