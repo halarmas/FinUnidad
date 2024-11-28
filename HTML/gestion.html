@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styleMatriculacion.css">
     <link rel="stylesheet" href="./css/styleGestion.css">
+    <script src="./js/scriptGestion.js"></script>
     <title>Gestión de Matriculación</title>
 </head>
 <body>
@@ -19,26 +19,41 @@
         </div>
     </header>
 
-    <form id="matriculacion-form">
+    <form id="matriculacion">
         <label for="alumno">Alumno:</label>
         <select id="alumno" name="alumno">
-            <!-- Los alumnos se cargarán dinámicamente aquí -->
+            
         </select>
 
         <label for="grado">Grado:</label>
-        <select id="grado" name="grado">
-            <!-- Los grados se cargarán dinámicamente aquí -->
+        <select id="grado" name="grado" >
+            
         </select>
 
-        <label for="anio">Año:</label>
-        <select id="anio" name="anio">
-            <!-- Los años se cargarán dinámicamente aquí -->
-        </select>
+        <label for="año">Año:</label>
+        <select id="año" onchange="buscarAsig()"><option>Seleccione</option>
+                <option value="1">2014/2015</option>
+                <option value="2">2015/2016</option>
+                <option value="3">2016/2017</option>
+                <option value="4">2017/2018</option></select>
+        
+            
+        
 
-        <h3>Asignaturas:</h3>
-        <table id="asignaturas-table">
-            <!-- Las asignaturas se cargarán dinámicamente aquí con checkboxes -->
-        </table>
+        
+        <div id="asignaturas" class="hidden">
+            <h3>Asignaturas Disponibles</h3>
+            <table id="asignaturas">
+                <thead>
+                    <tr>
+                        <th>Asignatura</th>
+                        <th>Seleccionar</th>
+                    </tr>
+                </thead>
+                <tbody id="resultado"></tbody>
+                    
+            </table>
+        </div>
 
         <button type="submit">Matricular</button>
     </form>

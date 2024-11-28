@@ -38,9 +38,30 @@ async function getAlumnosIdNif(idNif){
     
   }
 
+  async function getAlumnoAsignatura(idNif) {
+
+    let query =  'SELECT asignatura.id, asignatura.nombre, asignatura.creditos, asignatura.curso, asignatura.cuatrimestre from asignatura JOIN alumno_se_matricula_asignatura ON asignatura.id = alumno_se_matricula_asignatura.id_asignatura JOIN alumno ON alumno_se_matricula_asignatura.id_alumno = alumno.id where' //alumno.id LIKE "'+idNif+'" OR nombre LIKE "%'+ nombre +'%";';
+    
+    query += " alumno.id = ? OR alumno.nif = ?";
+    const params = [];  
+    params.push(idNif);
+    params.push(idNif);
+    
+      
+
+    console.log("query" +query);
+    const rows = await db.query(query, params);
+    const data = helper.emptyOrRows(rows);
+    
+  
+    return {data};
+    
+  }
+
 
   module.exports = {
     getAlumnosIdNif,
-    getAlumnoNombre
+    getAlumnoNombre,
+    getAlumnoAsignatura
     
   }

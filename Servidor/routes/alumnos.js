@@ -24,6 +24,30 @@ router.get("/filter", async function (req, res,) {
 	}
 });
 
+
+router.get("/asignaturas", async function (req, res,) {
+	
+	const {idNif} = req.query;
+
+	console.log("idnif"+idNif);
+	console.log("idnif"+idNif);
+
+
+	try {
+        const resultado = await alumnosService.getAlumnoAsignatura(idNif);
+        const msg = "Se han filtrado correctamente todos las asignaturas";
+		let data = resultado.data;
+        res.status(200).json({msg,data});
+        console.debug(data);
+		
+	} catch (err){
+		console.error("Error en busqueda de asignaturas", err.message);
+		res.sendStatus(500);
+	}
+});
+
+
+
 router.get("/:nombre", async function (req, res,) {
 	
 	const nombre  = req.params.nombre;
@@ -40,6 +64,10 @@ router.get("/:nombre", async function (req, res,) {
 		res.sendStatus(500);
 	}
 });
+
+
+
+
 
 
 
